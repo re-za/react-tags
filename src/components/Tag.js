@@ -28,7 +28,7 @@ class Tag extends Component {
 
     const tagComponent = (
       <span
-        className={ClassNames('tag-wrapper', props.classNames.tag, {'opacity-none' : isDragging}, {'cursor-move': canDrag(props)})}
+        className={ClassNames('tag-wrapper', props.classNames.tag, props.tag.className,{'opacity-none' : isDragging}, {'cursor-move': canDrag(props)})}
         onClick={props.onTagClicked}
         onKeyDown={props.onTagClicked}>
         {label}
