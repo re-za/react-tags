@@ -25,10 +25,15 @@ class Tag extends Component {
       connectDropTarget,
       readOnly,
     } = props;
+    
+    console.log("HERE");
+    console.log(props);
+    console.log(props.tag);
+    console.log(props.tag.className);
 
     const tagComponent = (
       <span
-        className={ClassNames('tag-wrapper', props.classNames.tag, props.tag.className,{'opacity-none' : isDragging}, {'cursor-move': canDrag(props)})}
+        className={ClassNames('tag-wrapper', props.classNames.tag, props.tag.className, {'opacity-none' : isDragging}, {'cursor-move': canDrag(props)})}
         onClick={props.onTagClicked}
         onKeyDown={props.onTagClicked}>
         {label}
